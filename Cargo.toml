@@ -2,7 +2,7 @@
 name = "blobfind"
 version = "0.1.0"
 edition = "2021"
-authors = ["JaydenCJ"]
+authors = ["JaydenCJ <aisingioro.kiyon@gmail.com>"]
 rust-version = "1.75"
 description = "Inventories native binaries, shared libraries and high-entropy blobs hiding inside dependency trees, with provenance hints — fully offline."
 license = "MIT"
