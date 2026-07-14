@@ -1,0 +1,18 @@
+# --- build outputs ---
+target/
+
+# --- scratch dependency trees created while testing scans locally ---
+node_modules/
+.venv/
+venv/
+__pycache__/
+
+# --- lock files from local snapshot experiments (fixtures live in temp dirs) ---
+/blobfind.lock
+
+# --- editor / OS noise ---
+.DS_Store
+.idea/
+.vscode/
+*.log
+tmp/

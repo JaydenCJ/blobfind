@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="620" viewBox="0 0 1060 620" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+  <!-- Illustrative terminal rendering of a blobfind session against a
+       real-world-sized tree. For verbatim captured output, see the README
+       Quickstart (produced by `bash examples/fixture.sh`). -->
+  <rect width="1060" height="620" rx="10" fill="#1c2128"/>
+  <rect width="1060" height="34" rx="10" fill="#2d333b"/>
+  <rect y="24" width="1060" height="10" fill="#2d333b"/>
+  <circle cx="20" cy="17" r="6" fill="#f47067"/>
+  <circle cx="40" cy="17" r="6" fill="#e0b543"/>
+  <circle cx="60" cy="17" r="6" fill="#57ab5a"/>
+  <text x="530" y="22" text-anchor="middle" fill="#909dab">blobfind — what executable content is hiding in your dependency tree?</text>
+
+  <g fill="#adbac7">
+    <text x="24" y="64"><tspan fill="#6cb6ff">$</tspan> blobfind scan .</text>
+    <text x="24" y="92" fill="#96d0ff">npm · sharp@0.33.4 — 1 finding</text>
+    <text x="24" y="116" fill="#909dab">  KIND    FORMAT             ARCH             SIZE  ENTROPY  PATH</text>
+    <text x="24" y="140">  <tspan fill="#f47067">native</tspan>  ELF shared object  x86-64 (64-bit)  5.2M  6.31     build/Release/sharp.node</text>
+
+    <text x="24" y="172" fill="#96d0ff">npm · leveldown@6.1.1 — 1 finding</text>
+    <text x="24" y="196">  <tspan fill="#e0b543">archive</tspan> gzip data          -                1.1M  7.99     prebuilds/linux-x64.tar.gz</text>
+
+    <text x="24" y="228" fill="#96d0ff">pip · numpy@1.26.4 — 1 finding</text>
+    <text x="24" y="252">  <tspan fill="#f47067">native</tspan>  ELF shared object  x86-64 (64-bit)  7.8M  6.12     core/_multiarray_umath…so</text>
+
+    <text x="24" y="284" fill="#96d0ff">cargo · ring@0.17.8 — 1 finding</text>
+    <text x="24" y="308">  <tspan fill="#f47067">native</tspan>  ELF relocatable object  x86-64 (64-bit)  84K  5.90  pregenerated/aesni-x86_64-elf.o</text>
+
+    <text x="24" y="340" fill="#96d0ff">unattributed — 1 finding</text>
+    <text x="24" y="364">  <tspan fill="#c084fc">opaque</tspan>  high-entropy data  -                8.0K  7.98     assets/telemetry.bin</text>
+
+    <text x="24" y="400" fill="#909dab">summary: 3407 files scanned · 3 native · 1 archive · 1 opaque blob · 4 packages affected</text>
+
+    <text x="24" y="444"><tspan fill="#6cb6ff">$</tspan> blobfind snapshot . -o blobfind.lock</text>
+    <text x="24" y="468">wrote 5 blobs to blobfind.lock</text>
+
+    <text x="24" y="504"><tspan fill="#6cb6ff">$</tspan> blobfind diff .            <tspan fill="#909dab"># after the next npm install</tspan></text>
+    <text x="24" y="528" fill="#57ab5a">+ added    native  node_modules/left-pad/helper.so  (256K, sha256 91c2a4f00b7d…)</text>
+    <text x="24" y="552" fill="#e0b543">~ changed  native  node_modules/sharp/build/Release/sharp.node  (sha256 ab12… -> ef34…)</text>
+    <text x="24" y="576" fill="#f47067">drift: 1 added · 0 removed · 1 changed (baseline had 5 blobs)   exit 1</text>
+  </g>
+</svg>

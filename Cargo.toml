@@ -1,0 +1,18 @@
+[package]
+name = "blobfind"
+version = "0.1.0"
+edition = "2021"
+authors = ["JaydenCJ"]
+rust-version = "1.75"
+description = "Inventories native binaries, shared libraries and high-entropy blobs hiding inside dependency trees, with provenance hints — fully offline."
+license = "MIT"
+repository = "https://github.com/JaydenCJ/blobfind"
+keywords = ["supply-chain", "audit", "binaries", "inventory", "security"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+# None. blobfind is std-only by design: offline, deterministic, zero supply chain.
+
+[profile.release]
+strip = true
+lto = true
